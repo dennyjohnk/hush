@@ -1,0 +1,101 @@
+export const FETCH_POSTS_BEGIN = "FETCH_POSTS_BEGIN";
+export const FETCH_POSTS_SUCCESS = "FETCH_POSTS_SUCCESS";
+export const FETCH_POSTS_FAILURE = "FETCH_POSTS_FAILURE";
+
+export const LIKE_POST = "LIKE_POST";
+export const LOVE_POST = "LOVE_POST";
+export const CLAP_POST = "CLAP_POST";
+export const SUPER_POST = "SUPER_POST";
+export const DISLIKE_POST = "DISLIKE_POST";
+
+export const fetchPostsBegin = () => ({
+  type: FETCH_POSTS_BEGIN
+});
+
+export const fetchPostsSuccess = posts => ({
+  type: FETCH_POSTS_SUCCESS,
+  payload: { posts }
+});
+
+export const fetchPostsFailure = error => ({
+  type: FETCH_POSTS_FAILURE,
+  payload: { error }
+});
+
+export function fetchPosts(channel) {
+  return function(dispatch) {
+    dispatch(fetchPostsBegin());
+    return fetch(`https://api.myjson.com/bins/18feih`)
+      .then(
+        response => response.json(),
+        error => console.log("An error occurred.", error)
+      )
+      .then(json => {
+        dispatch(fetchPostsSuccess(json));
+      });
+  };
+}
+
+export function likePost(id) {
+  return function(dispatch) {
+    dispatch(likePostById(id));
+  };
+}
+
+export const likePostById = id => {
+  return {
+    type: "LIKE_POST",
+    id
+  };
+};
+
+export function lovePost(id) {
+  return function(dispatch) {
+    dispatch(lovePostById(id));
+  };
+}
+
+export const lovePostById = id => {
+  return {
+    type: "LOVE_POST",
+    id
+  };
+};
+
+export function clapPost(id) {
+  return function(dispatch) {
+    dispatch(clapPostById(id));
+  };
+}
+
+export const clapPostById = id => {
+  return {
+    type: "CLAP_POST",
+    id
+  };
+};
+
+export function superPost(id) {
+  return function(dispatch) {
+    dispatch(superPostById(id));
+  };
+}
+export const superPostById = id => {
+  return {
+    type: "SUPER_POST",
+    id
+  };
+};
+
+export function dislikePost(id) {
+  return function(dispatch) {
+    dispatch(dislikePostById(id));
+  };
+}
+
+export const dislikePostById = id => {
+  return {
+    type: "DISLIKE_POST",
+    id
+  };
+};

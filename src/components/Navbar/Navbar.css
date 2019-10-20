@@ -1,0 +1,22 @@
+.header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(41, 76, 102, 0.16) 0px 1px 3px 0px;
+  background: rgb(255, 255, 255);
+}
+
+.header-wrapper {
+  width: 80%;
+  padding: 12px;
+}
+
+.brand-logo {
+  height: 32px;
+  width: 32px;
+}
+.brand-text {
+  height: 18px;
+  margin-left: 6px;
+}
