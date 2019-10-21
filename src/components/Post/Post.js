@@ -1,11 +1,9 @@
 import React from "react";
-import Tag from "../Tag/Tag";
-//import Reaction from "../Reaction/Reaction";
+import Footer from "./Footer/Footer";
 import { withRouter } from "react-router-dom";
 import ActionBar from "../Action/Action";
 import UserInfo from "./UserInfo/UserInfo";
 import CompanyInfo from "./Company/Company";
-import ReactionCount from "./ReactionCount/ReactionCount";
 import "./Post.css";
 
 const Post = props => {
@@ -24,15 +22,11 @@ const Post = props => {
         {post.description}
       </p>
       <ActionBar post={post} />
-      <div className="line"></div>
+      <div className="break-line"></div>
       <div className="post-footer">
-        <div className="post-tags">
-          {post.tags.slice(0, 3).map((tag, index) => {
-            return <Tag tag={tag} key={index} />;
-          })}
-        </div>
+        <Footer post={post} />
+        <div className="post-tags"></div>
       </div>
-      <ReactionCount post={post} />
     </div>
   );
 };

@@ -7,52 +7,58 @@ import TwitterIcon from "../../images/TwitterIcon.svg";
 import ShareIcon from "../../images/ShareIcon.svg";
 import Reaction from "../Reaction/Reaction";
 
-const ActionBar = props => {
-  var showReactionContainer = true;
-  const handleDisplayReaction = () => {
-    showReactionContainer = true;
-    console.log("ok", showReactionContainer);
+class ActionBar extends React.Component {
+  state = {
+    visibility: false
   };
-  return (
-    <div>
-      <div>{showReactionContainer ? <Reaction post={props.post} /> : ""}</div>
-      <div className="action-container">
-        <div
-          className="action-item cursor-pointer helpfull-block"
-          onClick={handleDisplayReaction}
-        >
-          <img src={HelpfullIcon} alt="" className="help-icon" />
-          <span className="helpicon-text">Helpfull</span>
-        </div>
-        <div className="action-item cursor-pointer answer-block ">
-          <img src={AnswerIcon} alt="" className="answer-icon" />
-          <span className="answericon-text">Answer</span>
-        </div>
-        <div className="action-item share-icon-block">
-          <img
-            src={FbIcon}
-            alt="fb icon"
-            className="help-icon cursor-pointer"
-          />
-          <img
-            src={TwitterIcon}
-            alt="twitter icon"
-            className="help-icon cursor-pointer"
-          />
-          <img
-            src={ShareIcon}
-            alt="share icon"
-            className="help-icon cursor-pointer"
-          />
-          <img
-            src={ShareIcon}
-            alt="more icon"
-            className="more-icon cursor-pointer"
-          />
+  render() {
+    const post = this.props.post;
+    this.handleDisplayReaction = () => {
+      console.log("ok");
+      this.setState({ visibility: !this.state.visibility });
+    };
+    return (
+      <div>
+        <div>{this.state.visibility ? <Reaction post={post} /> : ""}</div>
+        <div className="action-container">
+          <div
+            className="action-item cursor-pointer helpfull-block"
+            onMouseEnter={this.handleDisplayReaction}
+            onMouseLeave={this.handleDisplayReaction}
+          >
+            <img src={HelpfullIcon} alt="" className="help-icon" />
+            <span className="helpicon-text">Helpfull</span>
+          </div>
+          <div className="action-item cursor-pointer answer-block ">
+            <img src={AnswerIcon} alt="" className="answer-icon" />
+            <span className="answericon-text">Answer</span>
+          </div>
+          <div className="action-item share-icon-block">
+            <img
+              src={FbIcon}
+              alt="fb icon"
+              className="help-icon cursor-pointer"
+            />
+            <img
+              src={TwitterIcon}
+              alt="twitter icon"
+              className="help-icon cursor-pointer"
+            />
+            <img
+              src={ShareIcon}
+              alt="share icon"
+              className="help-icon cursor-pointer"
+            />
+            <img
+              src={ShareIcon}
+              alt="more icon"
+              className="more-icon cursor-pointer"
+            />
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default ActionBar;
