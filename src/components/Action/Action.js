@@ -13,14 +13,27 @@ const ActionBar = () => {
         <img src={HelpfullIcon} alt="" className="help-icon" />
         <span className="helpicon-text">Helpfull</span>
       </div>
-      <div className="action-item">
-        <img src={AnswerIcon} alt="" className="help-icon" />
-        <span className="helpicon-text">Answer</span>
+      <div className="action-item cursor-pointer answer-block ">
+        <img src={AnswerIcon} alt="" className="answer-icon" />
+        <span className="answericon-text">Answer</span>
       </div>
-      <div className="action-item">
-        <img src={FbIcon} alt="fb icon" className="help-icon" />
-        <img src={TwitterIcon} alt="twitter icon" className="help-icon" />
-        <img src={ShareIcon} alt="share icon" className="help-icon" />
+      <div className="action-item share-icon-block">
+        <img src={FbIcon} alt="fb icon" className="help-icon cursor-pointer" />
+        <img
+          src={TwitterIcon}
+          alt="twitter icon"
+          className="help-icon cursor-pointer"
+        />
+        <img
+          src={ShareIcon}
+          alt="share icon"
+          className="help-icon cursor-pointer"
+        />
+        <img
+          src={ShareIcon}
+          alt="more icon"
+          className="more-icon cursor-pointer"
+        />
       </div>
     </div>
   );

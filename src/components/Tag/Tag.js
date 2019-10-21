@@ -1,7 +1,8 @@
 import React from "react";
+import "./Tag.css";
 
 const Tag = props => {
-  return <span>{props.tag}</span>;
+  return <span className="tag">#{props.tag}</span>;
 };
 
 export default Tag;

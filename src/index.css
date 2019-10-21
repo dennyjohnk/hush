@@ -76,3 +76,16 @@ body {
 .inline-block {
   display: inline-block;
 }
+.text-left {
+  text-align: left;
+}
+
+.block {
+  display: block;
+}
+.no-margin {
+  margin: 0;
+}
+.padding-10 {
+  padding: 10px;
+}
