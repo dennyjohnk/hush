@@ -35,7 +35,7 @@ export function fetchPosts() {
       .then(json => {
         setTimeout(function() {
           dispatch(fetchPostsSuccess(json));
-        }, 5000);
+        }, 0);
       });
   };
 }

@@ -1,0 +1,16 @@
+.action-container {
+  display: flex;
+  flex-direction: row;
+  padding: 6px 0;
+  margin-bottom: 6px;
+}
+
+.action-item {
+  display: flex;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.helpicon-text {
+  margin-left: 6px;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import Tag from "../Tag/Tag";
 import Reaction from "../Reaction/Reaction";
 import { withRouter } from "react-router-dom";
+import ActionBar from "../Action/Action";
 import "./Post.css";
 
 const Post = props => {
@@ -19,11 +20,12 @@ const Post = props => {
             {post.likeCount}
           </span>
         </div>
-        <p>{post.description}</p>
+        <p className="truncate-description post-description">
+          {post.description}
+        </p>
       </div>
-      <div className="post-toolbar">
-        <Reaction post={post} />
-      </div>
+      <ActionBar />
+      <div className="line"></div>
       <div className="post-footer">
         <div className="post-tags">
           {post.tags.map((tag, index) => {

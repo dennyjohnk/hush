@@ -3,8 +3,6 @@
 }
 
 .hush-feed-label {
-  height: 12px;
-  width: 56px;
   color: var(--hush-feed-label-color);
   font-size: 10px;
   font-weight: 600;
@@ -27,16 +25,23 @@
   height: 32px;
 }
 .channel:hover {
-  background-color: rgb(235, 244, 255);
+  background-color: #ffffff;
 }
 .channel-name {
   margin-left: 10px;
-  font: 14px "Inter UI", Helvetica, Arial, serif;
+  font-size: 14px;
   height: 16px;
   width: 37px;
   color: #333333;
-  font-size: 13px;
-  font-weight: bold;
   letter-spacing: -0.23px;
   line-height: 16px;
+}
+.channel-active-icon-container {
+  width: 100%;
+  text-align: right;
+}
+
+.channel-logo {
+  width: 20px;
+  height: 20px;
 }

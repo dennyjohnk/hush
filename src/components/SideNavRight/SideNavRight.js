@@ -5,7 +5,7 @@ class SideNavRight extends React.Component {
   render() {
     return (
       <div className="sidenav-right">
-        <div className="pull-right ask-a-question-block">
+        <div className="pull-right ask-a-question-block cursor-pointer">
           <p>Ask a question</p>
         </div>
       </div>

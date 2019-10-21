@@ -1,5 +1,8 @@
 :root {
   --hush-feed-label-color: #5f748c;
+  --hush-white: rgb(255, 255, 255);
+  --hush-body-background: #f2f4f7;
+  --post-font-color: #333333;
 }
 @import url("https://rsms.me/inter/inter.css");
 html {
@@ -14,7 +17,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #f2f4f7 !important;
+  background-color: var(--hush-body-background);
   min-width: 320px;
   width: 100%;
 }
