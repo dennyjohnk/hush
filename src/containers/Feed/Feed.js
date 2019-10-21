@@ -1,17 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
 import Post from "../../components/Post/Post";
+import Skeleton from "../../components/Skeleton/Skeleton";
 import "./Feed.css";
 
 class Feed extends React.Component {
   render() {
-    console.log(this.props);
     const post = this.props.post ? (
       <div>
         <Post post={this.props.post} />
       </div>
     ) : (
-      <div className="center">Loading post...</div>
+      <Skeleton />
     );
     return <div className="main">{post}</div>;
   }

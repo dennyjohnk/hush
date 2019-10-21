@@ -1,8 +1,7 @@
 ## Folder Structure
 
 ```
-my-app/
-
+hush/
   node_modules/
   public/
     index.html
@@ -25,8 +24,8 @@ my-app/
       responsive.css
     images/
     reducers/
-    postReducer.js
-    rootReucer.js
+      postReducer.js
+      rootReucer.js
     App.js
     index.css
     index.js

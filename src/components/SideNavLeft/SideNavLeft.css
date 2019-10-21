@@ -1,3 +1,42 @@
 .sidenav-left {
   margin-top: 12px;
 }
+
+.hush-feed-label {
+  height: 12px;
+  width: 56px;
+  color: var(--hush-feed-label-color);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: -0.12px;
+  line-height: 12px;
+  margin-bottom: 6px;
+}
+.feed-group {
+  height: 82px;
+  width: 192px;
+}
+
+.channel {
+  padding: 0 6px;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 32px;
+}
+.channel:hover {
+  background-color: rgb(235, 244, 255);
+}
+.channel-name {
+  margin-left: 10px;
+  font: 14px "Inter UI", Helvetica, Arial, serif;
+  height: 16px;
+  width: 37px;
+  color: #333333;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: -0.23px;
+  line-height: 16px;
+}

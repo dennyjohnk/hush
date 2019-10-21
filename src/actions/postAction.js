@@ -8,6 +8,8 @@ export const CLAP_POST = "CLAP_POST";
 export const SUPER_POST = "SUPER_POST";
 export const DISLIKE_POST = "DISLIKE_POST";
 
+const API_ENDPOINT = "https://api.myjson.com/bins/18feih";
+
 export const fetchPostsBegin = () => ({
   type: FETCH_POSTS_BEGIN
 });
@@ -22,16 +24,18 @@ export const fetchPostsFailure = error => ({
   payload: { error }
 });
 
-export function fetchPosts(channel) {
+export function fetchPosts() {
   return function(dispatch) {
     dispatch(fetchPostsBegin());
-    return fetch(`https://api.myjson.com/bins/18feih`)
+    return fetch(API_ENDPOINT)
       .then(
         response => response.json(),
         error => console.log("An error occurred.", error)
       )
       .then(json => {
-        dispatch(fetchPostsSuccess(json));
+        setTimeout(function() {
+          dispatch(fetchPostsSuccess(json));
+        }, 5000);
       });
   };
 }

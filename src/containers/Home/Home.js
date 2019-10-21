@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import Post from "../../components/Post/Post";
+import Skeleton from "../../components/Skeleton/Skeleton";
 import "./Home.css";
 
 class Home extends React.Component {
@@ -13,7 +14,7 @@ class Home extends React.Component {
         return <Post post={post} key={post.id} />;
       })
     ) : (
-      <div className="center">Loading posts ...</div>
+      <Skeleton />
     );
 
     return <div className="main">{postList}</div>;
