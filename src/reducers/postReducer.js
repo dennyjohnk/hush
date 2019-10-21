@@ -29,7 +29,7 @@ export default function postReducer(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        items: action.payload.posts.aData
+        items: action.payload.posts
       };
 
     case FETCH_POSTS_FAILURE:
@@ -41,78 +41,52 @@ export default function postReducer(state = initialState, action) {
       };
 
     case LIKE_POST:
-      index = state.items.findIndex(post => post.id === action.id);
+      state = { ...state };
+      index = state.items.findIndex(post => post.id === action.payload);
+      state.items[index].likeCount++;
       return {
         ...state,
         loading: false,
-        items: [
-          ...state.items.slice(0, index),
-          {
-            ...state.items[index],
-            likeCount: ++state.items[index].likeCount
-          },
-          ...state.items.slice(index + 1)
-        ]
+        items: [...state.items]
       };
-
     case LOVE_POST:
-      index = state.items.findIndex(post => post.id === action.id);
+      state = { ...state };
+      index = state.items.findIndex(post => post.id === action.payload);
+      state.items[index].heartCount++;
       return {
         ...state,
         loading: false,
-        items: [
-          ...state.items.slice(0, index),
-          {
-            ...state.items[index],
-            likeCount: ++state.items[index].likeCount
-          },
-          ...state.items.slice(index + 1)
-        ]
+        items: [...state.items]
       };
 
     case CLAP_POST:
-      index = state.items.findIndex(post => post.id === action.id);
+      state = { ...state };
+      index = state.items.findIndex(post => post.id === action.payload);
+      state.items[index].clapCount++;
       return {
         ...state,
         loading: false,
-        items: [
-          ...state.items.slice(0, index),
-          {
-            ...state.items[index],
-            likeCount: ++state.items[index].likeCount
-          },
-          ...state.items.slice(index + 1)
-        ]
+        items: [...state.items]
       };
 
     case SUPER_POST:
-      index = state.items.findIndex(post => post.id === action.id);
+      state = { ...state };
+      index = state.items.findIndex(post => post.id === action.payload);
+      state.items[index].superbCount++;
       return {
         ...state,
         loading: false,
-        items: [
-          ...state.items.slice(0, index),
-          {
-            ...state.items[index],
-            likeCount: ++state.items[index].likeCount
-          },
-          ...state.items.slice(index + 1)
-        ]
+        items: [...state.items]
       };
 
     case DISLIKE_POST:
-      index = state.items.findIndex(post => post.id === action.id);
+      state = { ...state };
+      index = state.items.findIndex(post => post.id === action.payload);
+      state.items[index].dislikeCount++;
       return {
         ...state,
         loading: false,
-        items: [
-          ...state.items.slice(0, index),
-          {
-            ...state.items[index],
-            likeCount: ++state.items[index].likeCount
-          },
-          ...state.items.slice(index + 1)
-        ]
+        items: [...state.items]
       };
 
     default:

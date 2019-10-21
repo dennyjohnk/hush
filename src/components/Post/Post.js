@@ -5,6 +5,7 @@ import { withRouter } from "react-router-dom";
 import ActionBar from "../Action/Action";
 import UserInfo from "./UserInfo/UserInfo";
 import CompanyInfo from "./Company/Company";
+import ReactionCount from "./ReactionCount/ReactionCount";
 import "./Post.css";
 
 const Post = props => {
@@ -18,12 +19,11 @@ const Post = props => {
         onClick={() => props.history.push("/post/" + post.url)}
       >
         {post.title}
-        {post.likeCount}
       </div>
       <p className="truncate-description post-description">
         {post.description}
       </p>
-      <ActionBar />
+      <ActionBar post={post} />
       <div className="line"></div>
       <div className="post-footer">
         <div className="post-tags">
@@ -32,6 +32,7 @@ const Post = props => {
           })}
         </div>
       </div>
+      <ReactionCount post={post} />
     </div>
   );
 };

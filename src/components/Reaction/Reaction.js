@@ -1,6 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import "./Reaction.css";
+import LikeReaction from "../../images/reactions/LikeReaction.svg";
+import HeartReaction from "../../images/reactions/HeartReaction.svg";
+import ClapReaction from "../../images/reactions/ClapReaction.svg";
+import SuperbReaction from "../../images/reactions/SuperbReaction.svg";
+import DislikeReaction from "../../images/reactions/DislikeReaction.svg";
 import {
   likePost,
   lovePost,
@@ -36,26 +41,37 @@ class Reaction extends React.Component {
   };
   render() {
     return (
-      <div className="center">
-        <button className="btn grey" onClick={() => this.handleLikeClick()}>
-          Like
-        </button>
-
-        <button className="btn grey" onClick={this.handleLoveClick}>
-          Love
-        </button>
-
-        <button className="btn grey" onClick={this.handleClapClick}>
-          Clap
-        </button>
-
-        <button className="btn grey" onClick={this.handleSuperClick}>
-          Super
-        </button>
-
-        <button className="btn grey" onClick={this.handleDislikeClick}>
-          Dislike
-        </button>
+      <div className="reaction-container">
+        <div
+          className="reaction-icon-container inline-block cursor-pointer"
+          onClick={() => this.handleLikeClick()}
+        >
+          <img src={LikeReaction} alt="like" />
+        </div>
+        <div
+          className="reaction-icon-container inline-block cursor-pointer"
+          onClick={this.handleLoveClick}
+        >
+          <img src={HeartReaction} alt="heart" />
+        </div>
+        <div
+          className="reaction-icon-container inline-block cursor-pointer"
+          onClick={this.handleClapClick}
+        >
+          <img src={ClapReaction} alt="clap" />
+        </div>
+        <div
+          className="reaction-icon-container inline-block cursor-pointer"
+          onClick={this.handleSuperClick}
+        >
+          <img src={SuperbReaction} alt="super" />
+        </div>
+        <div
+          className="reaction-icon-container inline-block cursor-pointer"
+          onClick={this.handleDislikeClick}
+        >
+          <img src={DislikeReaction} alt="dislike" />
+        </div>
       </div>
     );
   }

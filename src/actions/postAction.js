@@ -32,9 +32,16 @@ export function fetchPosts() {
         response => response.json(),
         error => console.log("An error occurred.", error)
       )
-      .then(json => {
+      .then(data => {
+        let newData = data.aData.map(elem => {
+          elem.heartCount = 4;
+          elem.clapCount = 7;
+          elem.superbCount = 2;
+          elem.dislikeCount = 5;
+          return elem;
+        });
         setTimeout(function() {
-          dispatch(fetchPostsSuccess(json));
+          dispatch(fetchPostsSuccess(newData));
         }, 0);
       });
   };
@@ -49,7 +56,7 @@ export function likePost(id) {
 export const likePostById = id => {
   return {
     type: "LIKE_POST",
-    id
+    payload: id
   };
 };
 
@@ -62,7 +69,7 @@ export function lovePost(id) {
 export const lovePostById = id => {
   return {
     type: "LOVE_POST",
-    id
+    payload: id
   };
 };
 
@@ -75,7 +82,7 @@ export function clapPost(id) {
 export const clapPostById = id => {
   return {
     type: "CLAP_POST",
-    id
+    payload: id
   };
 };
 
@@ -87,7 +94,7 @@ export function superPost(id) {
 export const superPostById = id => {
   return {
     type: "SUPER_POST",
-    id
+    payload: id
   };
 };
 
@@ -100,6 +107,6 @@ export function dislikePost(id) {
 export const dislikePostById = id => {
   return {
     type: "DISLIKE_POST",
-    id
+    payload: id
   };
 };
