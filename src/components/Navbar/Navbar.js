@@ -2,6 +2,7 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./Navbar.css";
 import Logo from "../../images/hush-logo.svg";
+import ProfileUser from "../../images/ProfileUser.jpg";
 
 const Navbar = props => {
   return (
@@ -10,11 +11,14 @@ const Navbar = props => {
         <div className="inline-block">
           <Link to="/">
             <img src={Logo} alt="logo" className="brand-logo" />
-            <ul className="right"></ul>
           </Link>
         </div>
         <div className="pull-right inline-block">
-          <img src={Logo} alt="logo" className="brand-logo" />
+          <img
+            src={ProfileUser}
+            alt="logo"
+            className="brand-logo profile-pic"
+          />
         </div>
       </div>
     </header>

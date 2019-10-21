@@ -5,10 +5,8 @@ class SideNavRight extends React.Component {
   render() {
     return (
       <div className="sidenav-right">
-        <div className="feed-group pull-right ask-a-question-block">
-          <div>
-            <span>Ask a question</span>
-          </div>
+        <div className="pull-right ask-a-question-block">
+          <p>Ask a question</p>
         </div>
       </div>
     );

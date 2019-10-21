@@ -10,4 +10,7 @@
 .ask-a-question-block {
   background-color: #ffffff;
   height: 56px;
+  padding: 12px;
+  width: 80%;
+  text-align: center;
 }
