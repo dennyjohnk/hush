@@ -13,48 +13,63 @@ class ActionBar extends React.Component {
   };
   render() {
     const post = this.props.post;
+
     this.handleDisplayReaction = () => {
-      console.log("ok");
-      this.setState({ visibility: !this.state.visibility });
+      this.setState(prevState => ({
+        visibility: !prevState.visibility
+      }));
+    };
+    this.handleCloseReaction = () => {
+      this.setState(prevState => ({
+        visibility: false
+      }));
     };
     return (
-      <div>
-        <div>{this.state.visibility ? <Reaction post={post} /> : ""}</div>
-        <div className="action-container">
-          <div
-            className="action-item cursor-pointer helpfull-block"
-            onMouseEnter={this.handleDisplayReaction}
-            onMouseLeave={this.handleDisplayReaction}
-          >
-            <img src={HelpfullIcon} alt="" className="help-icon" />
-            <span className="helpicon-text">Helpfull</span>
-          </div>
-          <div className="action-item cursor-pointer answer-block ">
-            <img src={AnswerIcon} alt="" className="answer-icon" />
-            <span className="answericon-text">Answer</span>
-          </div>
-          <div className="action-item share-icon-block">
-            <img
-              src={FbIcon}
-              alt="fb icon"
-              className="help-icon cursor-pointer"
-            />
-            <img
-              src={TwitterIcon}
-              alt="twitter icon"
-              className="help-icon cursor-pointer"
-            />
-            <img
-              src={ShareIcon}
-              alt="share icon"
-              className="help-icon cursor-pointer"
-            />
-            <img
-              src={ShareIcon}
-              alt="more icon"
-              className="more-icon cursor-pointer"
-            />
-          </div>
+      <div className="action-container">
+        <div
+          className="action-item cursor-pointer helpfull-block"
+          onMouseEnter={this.handleDisplayReaction}
+          onMouseLeave={this.handleDisplayReaction}
+        >
+          {this.state.visibility ? (
+            <div
+              className="action-reaction-block"
+              onClick={this.handleCloseReaction}
+            >
+              <Reaction post={post} />
+            </div>
+          ) : (
+            ""
+          )}
+
+          <img src={HelpfullIcon} alt="" className="help-icon" />
+          <span className="helpicon-text">Helpfull</span>
+        </div>
+        <div className="action-item cursor-pointer answer-block ">
+          <img src={AnswerIcon} alt="" className="answer-icon" />
+          <span className="answericon-text">Answer</span>
+        </div>
+        <div className="action-item share-icon-block">
+          <img
+            src={FbIcon}
+            alt="fb icon"
+            className="help-icon cursor-pointer"
+          />
+          <img
+            src={TwitterIcon}
+            alt="twitter icon"
+            className="help-icon cursor-pointer"
+          />
+          <img
+            src={ShareIcon}
+            alt="share icon"
+            className="help-icon cursor-pointer"
+          />
+          <img
+            src={ShareIcon}
+            alt="more icon"
+            className="more-icon cursor-pointer"
+          />
         </div>
       </div>
     );

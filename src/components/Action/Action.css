@@ -34,6 +34,13 @@
 .answer-block {
   padding: 6px;
 }
+
+.helpfull-block {
+}
+
+.action-reaction-block {
+  position: absolute;
+}
 .answer-block:hover,
 .helpfull-block:hover {
   background-color: rgb(214, 235, 255);

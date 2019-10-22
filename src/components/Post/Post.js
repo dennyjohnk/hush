@@ -18,15 +18,16 @@ const Post = props => {
       >
         {post.title}
       </div>
-      <p className="truncate-description post-description">
-        {post.description}
-      </p>
+      <div className="post-title-container ">
+        <p className=" post-description truncate-description">
+          {post.description}
+        </p>
+      </div>
+
       <ActionBar post={post} />
       <div className="break-line"></div>
-      <div className="post-footer">
-        <Footer post={post} />
-        <div className="post-tags"></div>
-      </div>
+
+      <Footer post={post} />
     </div>
   );
 };

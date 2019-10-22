@@ -13,15 +13,20 @@ hush/
       Action/
       Navbar/
       Post/
+        Company/
+        Footer/
+        ReactionCount/
+        Tag/
+        UserInfo/
       Reaction/
       SideNavLeft/
       SideNavRight/
-      Tag/
+      Skeleton/
     containers/
       Feed/
       Home/
     css/
-      responsive.css
+    fonts/
     images/
     reducers/
       postReducer.js

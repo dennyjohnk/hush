@@ -14,7 +14,7 @@ class Home extends React.Component {
         return <Post post={post} key={post.id} />;
       })
     ) : (
-      <Skeleton />
+      <Skeleton count={3} />
     );
 
     return <div className="main">{postList}</div>;

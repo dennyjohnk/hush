@@ -1,6 +1,6 @@
-.post-skeleton {
+.avatar-skeleton {
   width: 220px;
-  height: 80px;
+  height: 70px;
 }
 
 .avatar {
@@ -8,7 +8,7 @@
   width: 52px;
   height: 52px;
   background-color: #ccc;
-  border-radius: 25%;
+  border-radius: 50%;
   margin: 8px;
   background-image: linear-gradient(
     90deg,
@@ -19,7 +19,7 @@
   background-size: 600px;
   animation: shine-avatar 2s infinite ease-out;
 }
-.post-skeleton .line {
+.avatar-skeleton .avatar-line {
   float: left;
   width: 140px;
   height: 16px;
@@ -34,11 +34,37 @@
   background-size: 600px;
   animation: shine-lines 2s infinite ease-out;
 }
-.post-skeleton .avatar + .line {
+
+.avatar-skeleton .avatar + .avatar-line {
   margin-top: 11px;
   width: 100px;
 }
-.post-skeleton .line ~ .line {
+
+.avatar-skeleton .avatar-line ~ .avatar-line {
+  background-color: #ddd;
+}
+
+.description-skeleton {
+  width: 400px;
+  height: 80px;
+  margin: 0 8px;
+}
+.description-skeleton .line {
+  float: left;
+  width: 300px;
+  height: 16px;
+  margin-top: 12px;
+  border-radius: 7px;
+  background-image: linear-gradient(
+    90deg,
+    #f4f4f4 0px,
+    rgba(229, 229, 229, 0.8) 200px,
+    #f4f4f4 250px
+  );
+  background-size: 600px;
+  animation: shine-lines 2s infinite ease-out;
+}
+.description-skeleton .line ~ .line {
   background-color: #ddd;
 }
 

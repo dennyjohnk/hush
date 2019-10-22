@@ -11,7 +11,7 @@ class Feed extends React.Component {
         <Post post={this.props.post} />
       </div>
     ) : (
-      <Skeleton />
+      <Skeleton count={1} />
     );
     return <div className="main">{post}</div>;
   }

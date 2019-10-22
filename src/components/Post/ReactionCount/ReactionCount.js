@@ -12,24 +12,32 @@ const ReactionCount = props => {
     <div className="reaction-count-container">
       <div className="reaction-count-icon-container inline-block">
         <img src={LikeReaction} alt="like" />
-        <span>{post.likeCount}</span>
+        <span className="like-count">{post.likeCount}</span>
       </div>
       <div className="reaction-count-icon-container inline-block">
         <img src={HeartReaction} alt="heart" />
-        <span>{post.heartCount}</span>
+        <span className="heart-count">{post.heartCount}</span>
       </div>
       <div className="reaction-count-icon-container inline-block">
         <img src={ClapReaction} alt="clap" />
-        <span>{post.clapCount}</span>
+        <span className="clap-count">{post.clapCount}</span>
       </div>
       <div className="reaction-count-icon-container inline-block">
         <img src={SuperbReaction} alt="super" />
-        <span>{post.superbCount}</span>
+        <span className="superb-count">{post.superbCount}</span>
       </div>
       <div className="reaction-count-icon-container inline-block">
         <img src={DislikeReaction} alt="dislike" />
-        <span>{post.dislikeCount}</span>
+        <span className="dislike-count">{post.dislikeCount}</span>
       </div>
+      {post.commentCount ? (
+        <div className="comment-count-container">
+          <span className="oval-3"></span>
+          <span className="commet-count-text">{post.commentCount} ans</span>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

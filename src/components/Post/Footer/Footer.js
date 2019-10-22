@@ -7,7 +7,7 @@ const Footer = props => {
   const tags = props.post.tags;
   const post = props.post;
   return (
-    <div>
+    <div className="post-footer">
       <Tag tags={tags} />
       <ReactionCount post={post} />
     </div>

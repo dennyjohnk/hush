@@ -42,7 +42,7 @@ export function fetchPosts() {
         });
         setTimeout(function() {
           dispatch(fetchPostsSuccess(newData));
-        }, 0);
+        }, 3000);
       });
   };
 }

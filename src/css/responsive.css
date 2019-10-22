@@ -1,4 +1,4 @@
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 750px) {
   .sidenav-left,
   .sidenav-right {
     display: none;
@@ -13,5 +13,17 @@
   .header-wrapper {
     width: 100%;
     padding: 12px;
+  }
+  .tag {
+    display: none;
+  }
+  .tag:nth-child(-n + 1) {
+    display: block;
+  }
+  .action-item {
+    margin-right: 10px;
+  }
+  .main {
+    margin-top: 0;
   }
 }

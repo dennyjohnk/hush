@@ -23,8 +23,8 @@ body {
 }
 .wrapper {
   min-height: 100vh;
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -33,7 +33,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  height: 100%;
   margin-top: 0px;
   flex: 1;
 }

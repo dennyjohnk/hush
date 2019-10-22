@@ -44,7 +44,7 @@ class Reaction extends React.Component {
       <div className="reaction-container">
         <div
           className="reaction-icon-container inline-block cursor-pointer"
-          onClick={() => this.handleLikeClick()}
+          onClick={this.handleLikeClick}
         >
           <img src={LikeReaction} alt="like" />
         </div>
