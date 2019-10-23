@@ -11,6 +11,11 @@
   margin-right: 16px;
   align-items: center;
 }
+.share-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .helpicon-text {
   color: #23a263;
   font-size: 12px;
@@ -25,6 +30,13 @@
   letter-spacing: -0.2px;
   line-height: 15px;
 }
+.share-icon-text {
+  color: #5f748c;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.23px;
+  line-height: 16px;
+}
 
 .helpicon-text,
 .answericon-text {
@@ -35,7 +47,8 @@
   padding: 6px;
 }
 
-.helpfull-block {
+.social-icon-block-mobile {
+  display: none;
 }
 
 .action-reaction-block {

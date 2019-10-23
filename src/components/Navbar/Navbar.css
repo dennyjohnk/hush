@@ -1,16 +1,25 @@
 .header {
   height: 50px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+}
+
+.header-wrapper {
   box-shadow: rgba(41, 76, 102, 0.16) 0px 1px 3px 0px;
   background: rgb(255, 255, 255);
 }
 
-.header-wrapper {
-  width: 80%;
+.logo-block {
+  order: 1;
 }
-
+.search-block {
+  order: 2;
+}
+.user-profile-block {
+  order: 3;
+}
 .brand-logo {
   width: 90px;
 }
@@ -22,4 +31,15 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
+}
+
+.search-form {
+  margin: 0 1rem;
+  flex-grow: 1; /* <-- THE SECRET SAUCE! */
+  min-width: 18rem;
+}
+
+.search-box {
+  width: 100%;
+  padding: 0.4rem;
 }

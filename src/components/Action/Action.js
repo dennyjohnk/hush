@@ -5,6 +5,7 @@ import AnswerIcon from "../../images/AnswerIcon.svg";
 import FbIcon from "../../images/FbIcon.svg";
 import TwitterIcon from "../../images/TwitterIcon.svg";
 import ShareIcon from "../../images/ShareIcon.svg";
+import MoreIcon from "../../images/MoreIcon.svg";
 import Reaction from "../Reaction/Reaction";
 
 class ActionBar extends React.Component {
@@ -50,23 +51,32 @@ class ActionBar extends React.Component {
           <span className="answericon-text">Answer</span>
         </div>
         <div className="action-item share-icon-block">
+          <div className="social-icon-block-desktop">
+            <img
+              src={FbIcon}
+              alt="fb icon"
+              className="help-icon cursor-pointer"
+            />
+            <img
+              src={TwitterIcon}
+              alt="twitter icon"
+              className="help-icon cursor-pointer"
+            />
+            <img
+              src={ShareIcon}
+              alt="share icon"
+              className="help-icon cursor-pointer"
+            />
+          </div>
+          <div className="social-icon-block-mobile">
+            <div className="share-item cursor-pointer answer-block ">
+              <img src={ShareIcon} alt="" className="share-icon" />
+              <span className="share-icon-text">Share</span>
+            </div>
+          </div>
+
           <img
-            src={FbIcon}
-            alt="fb icon"
-            className="help-icon cursor-pointer"
-          />
-          <img
-            src={TwitterIcon}
-            alt="twitter icon"
-            className="help-icon cursor-pointer"
-          />
-          <img
-            src={ShareIcon}
-            alt="share icon"
-            className="help-icon cursor-pointer"
-          />
-          <img
-            src={ShareIcon}
+            src={MoreIcon}
             alt="more icon"
             className="more-icon cursor-pointer"
           />

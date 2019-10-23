@@ -29,13 +29,16 @@ body {
 }
 
 .container {
-  width: 80%;
-  margin: auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   margin-top: 0px;
   flex: 1;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  align-items: stretch;
 }
 
 .columns {
@@ -44,15 +47,27 @@ body {
 }
 
 .sidenav-left {
-  width: 20%;
+  width: 192px;
+  flex: 0 0 192px;
   background-color: transparent;
   order: 1;
 }
 
 .sidenav-right {
-  width: 20%;
+  width: 192px;
+  flex: 0 0 192px;
   background-color: transparent;
   order: 3;
+}
+
+.main {
+  flex: 1;
+  order: 2;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
 }
 
 .pull-right {
