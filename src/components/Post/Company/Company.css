@@ -8,6 +8,7 @@
   margin-left: -6px;
   margin-bottom: 12px;
   display: flex;
+  align-items: center;
 }
 .question-label {
   color: #8294a5;

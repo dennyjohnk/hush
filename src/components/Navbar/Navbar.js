@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
-import "./Navbar.css";
 import Logo from "../../images/hush-logo.svg";
 import ProfileUser from "../../images/ProfileUser.jpg";
+import "./Navbar.css";
 
-const Navbar = props => {
+const Navbar = () => {
   return (
     <header className="header">
       <div className="header-wrapper">

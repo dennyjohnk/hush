@@ -3,6 +3,7 @@
   --hush-white: rgb(255, 255, 255);
   --hush-body-background: #f2f4f7;
   --post-font-color: #333333;
+  --post-container-background-color: #ffffff;
 }
 @import url("https://rsms.me/inter/inter.css");
 html {
@@ -42,10 +43,6 @@ body {
   flex: 1;
 }
 
-.main {
-  flex: 1;
-  order: 2;
-}
 .sidenav-left {
   width: 20%;
   background-color: transparent;

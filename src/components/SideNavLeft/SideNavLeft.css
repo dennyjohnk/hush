@@ -12,7 +12,6 @@
 }
 .feed-group {
   height: 82px;
-  width: 192px;
 }
 
 .channel {
@@ -23,8 +22,12 @@
   justify-content: flex-start;
   align-items: center;
   height: 32px;
+  border-radius: 4px;
 }
 .channel:hover {
+  background-color: #ffffff;
+}
+.active-tab {
   background-color: #ffffff;
 }
 .channel-name {

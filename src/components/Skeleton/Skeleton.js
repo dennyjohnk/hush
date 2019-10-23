@@ -1,10 +1,8 @@
 import React from "react";
 import "./Skeleton.css";
 
-const Skeleton = props => {
-  const n = props.count;
-
-  return [...Array(n)].map((e, i) => (
+const Skeleton = ({ count }) => {
+  return [...Array(count)].map((e, i) => (
     <div className="post-container" key={i}>
       <div className="post-skeleton">
         <div className="avatar-skeleton">
@@ -16,7 +14,6 @@ const Skeleton = props => {
           <div className="line"></div>
           <div className="line"></div>
         </div>
-
         <div className="line"></div>
       </div>
     </div>
