@@ -9,6 +9,9 @@
 .header-wrapper {
   box-shadow: rgba(41, 76, 102, 0.16) 0px 1px 3px 0px;
   background: rgb(255, 255, 255);
+  position: fixed;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
 }
 
 .logo-block {
@@ -21,7 +24,8 @@
   order: 3;
 }
 .brand-logo {
-  width: 90px;
+  width: 94px;
+  height: 32px;
 }
 .brand-text {
   height: 18px;
@@ -34,12 +38,15 @@
 }
 
 .search-form {
-  margin: 0 1rem;
-  flex-grow: 1; /* <-- THE SECRET SAUCE! */
-  min-width: 18rem;
+  flex-grow: 1;
 }
 
 .search-box {
-  width: 100%;
   padding: 0.4rem;
+  box-sizing: border-box;
+  height: 32px;
+  width: 452px;
+  border: 1px solid #b9cceb;
+  border-radius: 3px;
+  background-color: #ffffff;
 }

@@ -2,10 +2,14 @@
   .container {
     margin-left: calc(50% - 530px) !important;
     margin-right: calc(50% - 530px) !important;
+    margin-top: 50px;
   }
   .header {
     margin-left: calc(50% - 530px) !important;
     margin-right: calc(50% - 530px) !important;
+  }
+  .mobile-nav-block {
+    display: none;
   }
 }
 
@@ -17,6 +21,9 @@
   .header {
     margin-left: 20px !important;
     margin-right: 20px !important;
+  }
+  .mobile-nav-block {
+    display: none;
   }
   .tag:nth-child(-n + 1) {
     display: block;
@@ -33,6 +40,20 @@
 }
 
 @media only screen and (max-width: 770px) {
+  .container {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-top: 100px;
+  }
+  .mobile-nav-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    margin-bottom: 5px;
+  }
+
   .sidenav-left,
   .sidenav-right,
   .search-block {

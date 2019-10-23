@@ -39,6 +39,7 @@ body {
   margin-right: auto;
   justify-content: space-around;
   align-items: stretch;
+  margin-top: 50px;
 }
 
 .columns {
@@ -54,8 +55,8 @@ body {
 }
 
 .sidenav-right {
-  width: 192px;
-  flex: 0 0 192px;
+  width: 256px;
+  flex: 0 0 256px;
   background-color: transparent;
   order: 3;
 }

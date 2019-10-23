@@ -13,8 +13,11 @@ const Skeleton = ({ count }) => {
         <div className="description-skeleton">
           <div className="line"></div>
           <div className="line"></div>
+          <div className="line"></div>
+          <div className="line-space"></div>
+          <div className="line"></div>
+          <div className="line"></div>
         </div>
-        <div className="line"></div>
       </div>
     </div>
   ));

@@ -4,7 +4,7 @@
 
 .ask-a-question-block {
   height: 56px;
-  width: 80%;
+  width: 232px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -13,7 +13,6 @@
   border: 1px solid #b9cceb;
   border-radius: 3px;
   background-color: #ebf4ff;
-  width: 87%;
 }
 
 .question-icon {

@@ -1,10 +1,11 @@
 import React from "react";
 import Footer from "./Footer/Footer";
-import { withRouter } from "react-router-dom";
 import ActionBar from "../Action/Action";
 import UserInfo from "./UserInfo/UserInfo";
 import CompanyInfo from "./Company/Company";
+import Title from "./Title/Title";
 import PropTypes from "prop-types";
+
 import "./Post.css";
 
 const Post = props => {
@@ -13,17 +14,7 @@ const Post = props => {
     <div className="post-container" key={post.id}>
       {post.companyName && <CompanyInfo companyName={post.companyName} />}
       <UserInfo post={post} />
-      <div
-        className="cursor-pointer post-title"
-        onClick={() => props.history.push("/post/" + post.url)}
-      >
-        {post.title}
-      </div>
-      <div className="post-title-container ">
-        <p className="post-description truncate-description">
-          {post.description}
-        </p>
-      </div>
+      <Title post={post} />
       <ActionBar post={post} />
       <div className="break-line"></div>
       <Footer post={post} />
@@ -39,4 +30,4 @@ Post.protoTypes = {
   CompanyInfo: PropTypes.elementType
 };
 
-export default withRouter(Post);
+export default Post;

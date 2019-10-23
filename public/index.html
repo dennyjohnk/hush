@@ -19,4 +19,21 @@
     </noscript>
     <div id="root"></div>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      document.getElementById("nav-icon").addEventListener("click", something);
+      var menu = document.getElementById("menu");
+
+      function something() {
+        this.classList.toggle("open");
+        if (menu.style.visibility === "visible") {
+          menu.style.visibility = "hidden";
+          menu.classList.remove("menu-open");
+        } else {
+          menu.style.visibility = "visible";
+          menu.className += " menu-open";
+        }
+      }
+    });
+  </script>
 </html>
