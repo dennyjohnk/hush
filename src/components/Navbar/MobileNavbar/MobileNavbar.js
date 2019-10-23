@@ -1,7 +1,9 @@
 import React from "react";
+import HomeIcon from "../../../images/HomeIcon.svg";
+import PopularIcon from "../../../images/PopularIcon.svg";
 import "./MobileNavbar.css";
 
-const MobileNavbar = () => {
+const MobileNavbar = props => {
   return (
     <React.Fragment>
       <div className="mobile-nav-icon-container">
@@ -17,11 +19,17 @@ const MobileNavbar = () => {
       </div>
       <div id="menu" className="menu">
         <label className="hush-feed-label">HUSH FEED</label>
-        <div className="mobile-nav-home">
-          <span>Home</span>
+        <div className="channel mobile-nav">
+          <img src={HomeIcon} alt="Popular" className="channel-logo" />
+          <a href="/" className="channel-name">
+            Home
+          </a>
         </div>
-        <div className="mobile-nav-popular">
-          <span>Popular</span>
+        <div className="channel mobile-nav">
+          <img src={PopularIcon} alt="Popular" className="channel-logo" />
+          <a href="/" className="channel-name">
+            Popular
+          </a>
         </div>
       </div>
     </React.Fragment>

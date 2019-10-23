@@ -36,12 +36,17 @@
 .reaction-count-icon-container .dislike-count {
   color: #99a2ab;
 }
-.commet-count-text {
+.answer-label-mobile,
+.answer-label-desktop,
+.comment-count {
   color: #2477ea;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: -0.2px;
   line-height: 12px;
+}
+.comment-count {
+  margin-right: 5px;
 }
 
 .oval-3 {

@@ -9,3 +9,6 @@
   background-color: #ebf4ff;
   margin-right: 6px;
 }
+.tag-container {
+  display: flex;
+}
