@@ -2,7 +2,7 @@
   "name": "hush",
   "version": "0.1.0",
   "private": false,
-  "homepage": "./",
+  "homepage": "/",
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -24,10 +24,5 @@
   },
   "devDependencies": {
     "gh-pages": "^2.1.1"
-  },
-  "buildpacks": [
-    {
-      "url": "mars/create-react-app"
-    }
-  ]
+  }
 }
