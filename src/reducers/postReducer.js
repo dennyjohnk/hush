@@ -15,7 +15,7 @@ const initialState = {
   error: null
 };
 
-export default function postReducer(state = initialState, action) {
+const postReducer = (state = initialState, action) => {
   let index = {};
   switch (action.type) {
     case FETCH_POSTS_BEGIN:
@@ -92,4 +92,6 @@ export default function postReducer(state = initialState, action) {
     default:
       return state;
   }
-}
+};
+
+export default postReducer;

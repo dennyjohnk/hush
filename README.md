@@ -34,6 +34,7 @@ hush/
     App.js
     index.css
     index.js
+    store.js
     package.json
     README.md
 ```
